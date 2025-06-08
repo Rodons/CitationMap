@@ -1,0 +1,64 @@
+# CitationMap Configuration
+# This file contains default configuration settings.
+# Override these by setting environment variables or creating a custom config file.
+
+[general]
+# Project metadata
+name = "CitationMap"
+version = "0.1.0"
+description = "Citation analysis toolkit for immigration petitions"
+
+[api]
+# Rate limiting settings (requests per minute)
+openalex_rate_limit = 100
+icite_rate_limit = 200
+lens_rate_limit = 60
+clinicaltrials_rate_limit = 120
+
+# Request timeout settings (seconds)
+request_timeout = 30
+max_retries = 3
+retry_delay = 1.0
+
+[cache]
+# Cache configuration
+enabled = true
+directory = ".cache"
+expire_after = 604800  # 1 week in seconds
+max_size = "1GB"
+
+[analysis]
+# Citation analysis parameters
+min_citation_threshold = 1
+independence_author_match_threshold = 0.85
+independence_institution_match_threshold = 0.90
+
+# Field normalization
+enable_field_normalization = true
+default_field_percentile_years = 5
+
+[visualization]
+# Map and chart settings
+default_map_center = [40.0, -95.0]  # Center of USA
+default_map_zoom = 4
+max_institutions_on_map = 1000
+
+# Chart styling
+color_scheme = "viridis"
+figure_width = 800
+figure_height = 600
+
+[output]
+# Export settings
+default_output_dir = "outputs"
+include_raw_data = true
+pdf_page_size = "A4"
+csv_encoding = "utf-8"
+
+[logging]
+# Logging configuration
+level = "INFO"
+format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+file = "citationmap.log"
+max_size = "10MB"
+backup_count = 5 
