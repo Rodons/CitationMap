@@ -22,15 +22,15 @@
 | 1.6 | ✅ **DONE** | `cache.py` | Disk-cache abstraction with expiration |
 | 1.7 | ✅ **DONE** | Comprehensive tests | Tests for all data acquisition modules |
 
-## Phase 2 · Core Analysis (Week 2-3)
+## Phase 2 · Core Analysis (Week 2-3) ✅ **COMPLETED**
 
 | Task | Status | Output | Notes |
 |------|--------|--------|-------|
-| 2.1 | ⏳ **PENDING** | `merger.py` | Merge pipelines → canonical dataframe |
-| 2.2 | ⏳ **PENDING** | `field_norm.py` | Field-normalised metric calculator |
-| 2.3 | ⏳ **PENDING** | `independence.py` | Self vs independent citation classifier |
-| 2.4 | ⏳ **PENDING** | `uptake.py` | Downstream uptake aggregator |
-| 2.5 | ⏳ **PENDING** | pytest suite | Unit tests for analysis modules |
+| 2.1 | ✅ **DONE** | `merger.py` | Merge pipelines → canonical dataframe |
+| 2.2 | ✅ **DONE** | `field_norm.py` | Field-normalised metric calculator |
+| 2.3 | ✅ **DONE** | `independence.py` | Self vs independent citation classifier |
+| 2.4 | ✅ **DONE** | `uptake.py` | Downstream uptake aggregator |
+| 2.5 | ✅ **DONE** | pytest suite | Unit tests for analysis modules |
 
 ## Phase 3 · Visualisation & Reporting (Week 3-4)
 
@@ -56,10 +56,16 @@
 ## Current Priority
 
 **Phase 1 - Data Acquisition**: ✅ COMPLETED
-**Next: Phase 2 - Core Analysis**: Implement field normalization, independence classification, and uptake aggregation.
+**Phase 2 - Core Analysis**: ✅ COMPLETED
+**Next: Phase 3 - Visualization & Reporting**: Implement interactive maps, charts, dashboards, and CLI.
 
 ## Notes
 
 - Repository initialized and pushed to https://github.com/Rodons/CitationMap.git
 - Core data models implemented with Pydantic for type safety
 - Basic package structure established following src/ layout
+- **Phase 2 Analysis modules completed:**
+  - DataMerger: Converts papers to pandas/polars DataFrames, merges API data, creates analysis summaries
+  - FieldNormalizer: RCR percentile calculation, field impact scoring, outlier detection, cross-field ranking
+  - IndependenceClassifier: Author/institution name matching, self-citation detection, collaboration analysis
+  - UptakeAggregator: Patent citation analysis, clinical trial tracking, translational impact scoring

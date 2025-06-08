@@ -9,11 +9,10 @@ __version__ = "0.1.0"
 __author__ = "CitationMap Team"
 __email__ = "contact@citationmap.dev"
 
-from .core.analyzer import CitationAnalyzer
 from .core.models import AnalysisResult, PaperRecord
+# Note: CitationAnalyzer will be available in Phase 3
 
 __all__ = [
-    "CitationAnalyzer", 
     "AnalysisResult", 
     "PaperRecord",
     "__version__"
