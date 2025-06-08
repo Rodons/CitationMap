@@ -1,1 +1,1 @@
-"""Tests for CitationMap.""" 
+"""Tests for CitationMap."""

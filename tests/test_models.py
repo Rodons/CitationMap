@@ -1,14 +1,16 @@
 """Tests for core data models."""
 
-import pytest
 from datetime import datetime
+
+import pytest
+
 from citationmap.core.models import (
+    AnalysisResult,
     Author,
+    CitationContext,
+    FieldOfStudy,
     Institution,
     PaperRecord,
-    FieldOfStudy,
-    AnalysisResult,
-    CitationContext,
 )
 
 
@@ -78,9 +80,7 @@ class TestPaperRecord:
     def test_year_from_publication_date(self):
         """Test that year is extracted from publication_date."""
         pub_date = datetime(2023, 5, 15)
-        paper = PaperRecord(
-            id="123", title="Test Paper", publication_date=pub_date
-        )
+        paper = PaperRecord(id="123", title="Test Paper", publication_date=pub_date)
         assert paper.year == 2023
 
 
@@ -106,9 +106,7 @@ class TestAnalysisResult:
 
     def test_independence_ratio(self):
         """Test independence ratio calculation."""
-        result = AnalysisResult(
-            total_citations=100, total_independent_citations=80
-        )
+        result = AnalysisResult(total_citations=100, total_independent_citations=80)
         assert result.independence_ratio == 0.8
 
     def test_independence_ratio_zero_citations(self):
@@ -125,4 +123,4 @@ class TestCitationContext:
         assert CitationContext.SELF_CITATION == "self_citation"
         assert CitationContext.INSTITUTIONAL_CITATION == "institutional_citation"
         assert CitationContext.INDEPENDENT_CITATION == "independent_citation"
-        assert CitationContext.UNKNOWN == "unknown" 
+        assert CitationContext.UNKNOWN == "unknown"

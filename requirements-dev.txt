@@ -31,4 +31,4 @@ sphinx-click>=5.0.0
 
 # Development tools
 ipython>=8.0.0
-jupyter>=1.0.0 
+jupyter>=1.0.0

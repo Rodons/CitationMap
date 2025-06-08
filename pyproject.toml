@@ -17,7 +17,6 @@ maintainers = [
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
-    "Intended Audience :: Legal",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
@@ -192,4 +191,9 @@ exclude_lines = [
 ]
 
 [tool.coverage.html]
-directory = "htmlcov" 
+directory = "htmlcov"
+
+# Bandit configuration
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B101", "B601"] 
