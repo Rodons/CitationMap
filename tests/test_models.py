@@ -4,7 +4,7 @@ from datetime import datetime
 
 import pytest
 
-from citationmap.core.models import (
+from src.citationmap.core.models import (
     AnalysisResult,
     Author,
     CitationContext,
